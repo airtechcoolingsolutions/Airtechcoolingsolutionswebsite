@@ -13,7 +13,8 @@ function figmaAssetPlugin() {
     },
     load(id: string) {
       if (id.startsWith('figma:asset/')) {
-        return `export default "https://via.placeholder.com/150";`;
+        const hash = id.split('/')[1];
+        return `export default "https://shirt-moving-86727204.figma.site/_assets/v11/${hash}";`;
       }
     }
   }
