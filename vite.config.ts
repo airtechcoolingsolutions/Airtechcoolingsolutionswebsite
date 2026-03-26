@@ -8,12 +8,12 @@ function figmaAssetPlugin() {
     name: 'figma-asset-plugin',
     resolveId(id: string) {
       if (id.startsWith('figma:asset/')) {
-        return id;
+        return '\0' + id;
       }
     },
     load(id: string) {
-      if (id.startsWith('figma:asset/')) {
-        const hash = id.split('/')[1];
+      if (id.startsWith('\0figma:asset/')) {
+        const hash = id.replace('\0figma:asset/', '');
         return `export default "https://shirt-moving-86727204.figma.site/_assets/v11/${hash}";`;
       }
     }
