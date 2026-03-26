@@ -171,7 +171,7 @@ export function Contact() {
                     value={formData.phone}
                     onChange={handleChange}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#4EABEB] focus:border-transparent outline-none transition"
-                    placeholder="0947-433-0628"
+                    placeholder="0912-345-6789"
                   />
                 </div>
 
